@@ -131,7 +131,7 @@
     $('.whenwhere .owl-carousel').owlCarousel({
         loop: true
         , margin: 30
-        , mouseDrag: true
+        , mouseDrag: false
         , autoplay: false
         , dots: true
         , responsiveClass: true
@@ -143,7 +143,8 @@
                 items: 1
             }
             , 1000: {
-                items: 3
+                // items: 3
+                items: 2
             }
         }
     });
@@ -281,7 +282,7 @@
         minute = second * 60,
         hour = minute * 60,
         day = hour * 24;
-  let birthday = "Dec 15, 2023 00:00:00",
+  let birthday = "Aug 17, 2024 00:00:00",
       countDown = new Date(birthday).getTime(),
       x = setInterval(function() {    
         let now = new Date().getTime(),
