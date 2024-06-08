@@ -2113,3 +2113,11 @@ body.offcanvason .oliven-nav-toggle {
         background-attachment: scroll !important;
     }
 }
+
+
+
+/* Dress Code Style */
+#dresscode h4 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}

@@ -149,12 +149,34 @@
         }
     });
 
-    // Gift Registry owlCarousel
-    $('.gift .owl-carousel').owlCarousel({
-        loop: true
+     // Dress Code owlCarousel
+     $('#dresscode .owl-carousel').owlCarousel({
+        loop: false
         , margin: 30
         , mouseDrag: true
-        , autoplay: true
+        , autoplay: false
+        , dots: true
+        , responsiveClass: true
+        , responsive: {
+            0: {
+                margin: 10
+                , items: 1
+            }
+            , 600: {
+                items: 2
+            }
+            , 1000: {
+                items: 3
+            }
+        }
+    });
+
+    // Gift Registry owlCarousel
+    $('.gift .owl-carousel').owlCarousel({
+        loop: false
+        , margin: 30
+        , mouseDrag: true
+        , autoplay: false
         , dots: false
         , responsiveClass: true
         , responsive: {
