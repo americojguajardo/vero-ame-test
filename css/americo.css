@@ -1,0 +1,48 @@
+/* Dress Code Style */
+#dresscode h4 {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+/* RSVP */
+.custom-rsvp {
+  display: flex;
+}
+
+.rsvp-btns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#inviteCustomText {
+  text-align: center;
+}
+
+#inviteCustomText2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+#inviteCustomText2 button {
+  padding: 0.5rem !important;
+  line-height: 0.5rem;
+}
+
+#rsvp-confirmed-message {
+  text-align: center;
+  background: #0e914f3d;
+  border: 1px solid green;
+  border-radius: 6px;
+  color: black;
+}
+
+#rsvp-declined-message {
+  text-align: center;
+  background: #ff00001f;
+  border: 1px solid red;
+  border-radius: 6px;
+  color: black;
+}

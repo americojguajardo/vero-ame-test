@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/americo.css">
 </head>
 <body>
     <!-- Preloader -->
@@ -452,20 +453,34 @@
             <div id="rsvp" class="section-padding bg-img bg-fixed" data-background="images/banner-2.jpg">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 offset-md-3 bg-white p-40"> <span class="oliven-title-meta text-center">Will you attend?</span>
+                        <div class="col-md-6 offset-md-3 bg-white p-40"> <span class="oliven-title-meta text-center">Confirma tu asistencia</span>
                             <h2 class="oliven-title text-center">R.S.V.P</h2>
                             <br>
-                            <form class="contact__form" method="post" action="mail.php">
+                            <div class="contact__form">
+                            <!-- <form class="contact__form" method="post" action="mail.php"> -->
                             <!-- form message -->
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-12">
                                     <div class="alert alert-success contact__msg" style="display: none" role="alert">
                                         Your message was sent successfully.
                                     </div>
                                 </div>
+                            </div> -->
+                            <div class="custom-rsvp row">
+                                <div class="col-12">
+                                    <div id="inviteCustomText"></div>
+                                    <div id="inviteCustomText2"></div>
+                                    <div class="rsvp-btns">
+                                        <button id="acceptBtn">Aceptar</button>
+                                        <button id="confirmBtn" style="display: none;">Confirmar</button>
+                                        <button id="declineBtn">Rechazar</button>   
+                                    </div>
+                                    <div id="rsvp-confirmed-message" style="display: none;">Gracias, tu confirmación ha sido enviada. ¡Nos vemos pronto!</div>
+                                    <div id="rsvp-declined-message" style="display: none;">Lamentamos que no puedas asistir. ¡Esperamos verte pronto!</div>
+                                </div>
                             </div>
                             <!-- form element -->
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <input name="name" type="text" class="form-control" placeholder="Name" required> </div>
@@ -488,8 +503,8 @@
                                         <input name="submit" type="submit" class="btn buttono" value="SEND"> 
                                     </div>
                                 </div> 
-                            </div>
-                            </form>
+                            </div> -->
+                        </div>
                         </div>
                     </div>
                 </div>
