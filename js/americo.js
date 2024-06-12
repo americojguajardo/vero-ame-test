@@ -16,11 +16,27 @@ $(document).ready(function () {
   let attendingGuests = 0;
   let attendingGuests2 = 0;
 
-  $.get(`${backendUrl}/invitations/` + invitationId, function (data) {
-    $("#inviteCustomText").html(`Hola ${data.guestName}, tu invitación es para ${data.invitedGuests} personas.`)
-    attendingGuests = data.invitedGuests;
-    attendingGuests2 = data.invitedGuests;
-  });
+  // $.get(`${backendUrl}/invitations/` + invitationId, function (data) {
+  //   $("#inviteCustomText").html(`Hola ${data.guestName}, tu invitación es para ${data.invitedGuests} personas.`)
+  //   attendingGuests = data.invitedGuests;
+  //   attendingGuests2 = data.invitedGuests;
+  // });
+  if (invitationId) {
+    $('.custom-rsvp').show();
+    $.ajax({
+      url: `${backendUrl}/invitations/` + invitationId,
+      type: 'GET',
+      success: function (data) {
+        $("#inviteCustomText").html(`Hola ${data.guestName}, tu invitación es para ${data.invitedGuests} personas.`);
+        attendingGuests = data.invitedGuests;
+        attendingGuests2 = data.invitedGuests;
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.error('AJAX request failed:', textStatus, errorThrown);
+        $("#inviteCustomText").html('There was an error retrieving your invitation details.');
+      }
+    });
+  }
 
   // Confirm RSVP
   $(document).on('click', '#confirmBtn', function () {

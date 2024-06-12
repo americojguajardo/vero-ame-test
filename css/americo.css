@@ -4,6 +4,12 @@
   margin-bottom: 0;
 }
 
+/* Countdown */
+.americo-center-on-mobile {
+  background-position: center;
+}
+
+
 /* RSVP */
 .custom-rsvp {
   display: flex;
