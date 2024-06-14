@@ -52,3 +52,10 @@
   border-radius: 6px;
   color: black;
 }
+
+
+
+/* Only one gift */
+.owl-stage {
+  margin: auto;
+}
