@@ -2,6 +2,9 @@ $(document).ready(function () {
   const isLocal = false;
   const backendUrl = isLocal ? 'http://localhost:3000' : 'https://wedsign-back-production.up.railway.app';
 
+  // TESTIN this
+  $('.preloader').fadeOut("slow");
+
   $('.owl-carousel').on('click', '#iglesia', function () {
     window.open("https://maps.app.goo.gl/jkN9M2HXYjTQPL5T6", "_blank");
   });
@@ -27,7 +30,7 @@ $(document).ready(function () {
       url: `${backendUrl}/invitations/` + invitationId,
       type: 'GET',
       success: function (data) {
-        $("#inviteCustomText").html(`Hola ${data.guestName}, tu invitación es para ${data.invitedGuests} personas.`);
+        $("#inviteCustomText").html(`Hola ${data.guestName}, tu invitación es para ${data.invitedGuests} personas. <br> (No niños)`);
         attendingGuests = data.invitedGuests;
         attendingGuests2 = data.invitedGuests;
       },

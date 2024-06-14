@@ -21,9 +21,11 @@
         }
     };
     // Preloader
-    $(window).load(function() {
-    $('.preloader').fadeOut("slow");
-    });
+    // $(window).load(function() {
+    // $('.preloader').fadeOut("slow");
+    // });
+    // Trying to speed things up on americo.js
+    
     // Animations
     var contentWayPoint = function () {
         var i = 0;
