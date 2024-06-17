@@ -46,14 +46,15 @@ $(document).ready(function () {
     $.ajax({
       url: `${backendUrl}/invitations/rsvp/${invitationId}?status=accepted&attendingGuests=${attendingGuests}`,
       type: 'PUT',
-      // data: { attendingGuests: attendingGuests },
       success: function (data) {
-        // $("#inviteCustomText").html(`Gracias por confirmar tu asistencia.`)
+        $("#rsvp-title").html(`¡Muchas gracias!`)
         $("#acceptBtn").hide();
         $("#confirmBtn").hide();
         $("#declineBtn").hide();
+        $("#inviteCustomText").html(``)
         $("#inviteCustomText2").html(``)
         $("#rsvp-confirmed-message").show();
+        $("#rsvp-final-message").show();
       },
       error: function (xhr, status, error) {
         alert("Error: " + error)
@@ -87,12 +88,15 @@ $(document).ready(function () {
     $.ajax({
       url: `${backendUrl}/invitations/rsvp/${invitationId}?status=declined&attendingGuests=0`,
       type: 'PUT',
-      // data: { attendingGuests: attendingGuests },
       success: function (data) {
+        $("#rsvp-title").html(`¡Muchas gracias!`)
         $("#acceptBtn").hide();
         $("#declineBtn").hide();
         $("#inviteCustomText").html('');
+        $("#inviteCustomText2").html('');
         $("#rsvp-declined-message").show();
+        $("#rsvp-final-message").html(`¡Esperamos poder verte en otra ocasión!`)
+        $("#rsvp-final-message").show();
       },
       error: function (xhr, status, error) {
         alert("Error: " + error)

@@ -39,18 +39,14 @@
 
 #rsvp-confirmed-message {
   text-align: center;
-  background: #0e914f3d;
-  border: 1px solid green;
-  border-radius: 6px;
-  color: black;
+  color: #2E7D32;
+  font-size: 20px;
 }
 
 #rsvp-declined-message {
   text-align: center;
-  background: #ff00001f;
-  border: 1px solid red;
-  border-radius: 6px;
-  color: black;
+  color: #E10050;
+  font-size: 20px;
 }
 
 
