@@ -19,18 +19,13 @@ $(document).ready(function () {
   let attendingGuests = 0;
   let attendingGuests2 = 0;
 
-  // $.get(`${backendUrl}/invitations/` + invitationId, function (data) {
-  //   $("#inviteCustomText").html(`Hola ${data.guestName}, tu invitación es para ${data.invitedGuests} personas.`)
-  //   attendingGuests = data.invitedGuests;
-  //   attendingGuests2 = data.invitedGuests;
-  // });
   if (invitationId) {
     $('.custom-rsvp').show();
     $.ajax({
       url: `${backendUrl}/invitations/` + invitationId,
       type: 'GET',
       success: function (data) {
-        $("#inviteCustomText").html(`Hola ${data.guestName}, tu invitación es para ${data.invitedGuests} personas. <br> (No niños)`);
+        $("#inviteCustomText").html(`Hola ${data.guestName}, tu invitación es para ${data.invitedGuests} persona${data.invitedGuests > 1 ? 's' : ''}. <br> (No niños)`);
         attendingGuests = data.invitedGuests;
         attendingGuests2 = data.invitedGuests;
       },
